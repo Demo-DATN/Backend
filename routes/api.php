@@ -21,3 +21,10 @@ Route::prefix('user')->group(function() {
     Route::put('/{id}', 'UserController@update');
     Route::delete('/{id}', 'UserController@destroy');
 });
+Route::prefix('product')->group(function() {
+    Route::get('/', 'ProductController@index');
+    Route::post('/create', 'ProductController@store');
+    Route::get('/{id}', 'ProductController@show');
+    Route::put('/{id}', 'ProductController@update');
+    Route::delete('/{id}', 'ProductController@destroy');
+});
